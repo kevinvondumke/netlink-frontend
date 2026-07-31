@@ -117,10 +117,8 @@ async function onSubmit() {
       <img src="../assets/logos/logo-02.png" alt="Netlink Logo" height="200" />
       <p>
         Sign up and join to our
-        <span style="color: #006145">networking community</span>,
         <br />
-        and stand out in the
-        <span style="color: #006145">together.</span>
+        <span style="color: #006145">networking community</span>
       </p>
     </div>
     <div class="ntl-group ntl-form-container">
