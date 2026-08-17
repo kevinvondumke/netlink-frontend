@@ -1,0 +1,157 @@
+/* ===================================================
+   NETLINK MINIMAL FOOTER (XENON DESIGN SYSTEM)
+   =================================================== */
+
+.home-footer-wrapper {
+  background-color: var(--color-gray-50);
+  border-top: 1px solid var(--color-gray-200);
+  padding: 3.5rem 1.5rem 2rem 1.5rem;
+}
+
+.home-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* TOP FOOTER ROW */
+.home-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+  gap: 2rem;
+}
+
+.home-footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 340px;
+}
+
+.home-footer-brand-col a:hover {
+  background-color: transparent;
+}
+
+.home-footer-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.85rem;
+}
+
+.home-footer-tagline {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-gray-800);
+  margin: 0 0 0.5rem 0;
+}
+
+.home-footer-platform {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-600);
+  margin: 0;
+}
+
+/* FOOTER NAV LINKS */
+.home-footer-links-col {
+  display: flex;
+  gap: 3rem;
+}
+
+.home-footer-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.home-footer-nav-heading {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-900);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.home-footer-link {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-gray-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.home-footer-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* BOTTOM COPYRIGHT ROW */
+.home-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.75rem;
+}
+
+.home-footer-copy {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-600);
+  margin: 0;
+}
+
+.home-footer-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-footer-developer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: "Montserrat Light", sans-serif;
+  font-size: 0.65rem;
+}
+.home-footer-developer-badge a {
+  color: var(--color-primary);
+  font-family: "Montserrat Medium", sans-serif;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  background-color: transparent;
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================== */
+
+@media (max-width: 768px) {
+  .home-footer-wrapper {
+    padding: 2.5rem 1rem 1.75rem 1rem;
+  }
+
+  .home-footer-top {
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .home-footer-links-col {
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+  }
+
+  .home-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

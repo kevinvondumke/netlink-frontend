@@ -19,6 +19,11 @@
   src: url("./assets/fonts/Montserrat-Light.ttf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
 body {
   margin: 0;
   padding: 0;

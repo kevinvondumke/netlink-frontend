@@ -1,0 +1,193 @@
+.home-nav-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-gray-300);
+  transition: all 0.25s ease-in-out;
+}
+
+.home-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* BRAND LOGO */
+.home-nav-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.home-nav-brand:hover {
+  opacity: 0.85;
+  background: transparent;
+}
+
+.home-nav-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* CENTER ANCHOR LINKS */
+.home-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-nav-link {
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: var(--font-size-body-lg);
+  color: var(--color-gray-800);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.home-nav-link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-gray-100);
+}
+
+/* RIGHT ACTION BUTTONS */
+.home-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* SIGN IN (SECONDARY / GHOST) */
+.home-btn-signin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.25rem;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: var(--font-size-label);
+  color: var(--color-gray-800);
+  text-decoration: none;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.home-btn-signin:hover {
+  color: var(--color-primary);
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-300);
+}
+
+/* SIGN UP (PRIMARY / EMERALD CTA) */
+.home-btn-signup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.35rem;
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-label);
+  color: var(--color-white);
+  text-decoration: none;
+  background-color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 97, 69, 0.2);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.home-btn-signup:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(0, 97, 69, 0.3);
+  transform: translateY(-1px);
+}
+
+.home-btn-signup:active {
+  transform: translateY(0);
+}
+
+/* MOBILE TOGGLE (Hidden on desktop) */
+.home-nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: var(--color-gray-800);
+  border-radius: var(--radius-sm);
+}
+
+.home-nav-mobile-toggle:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-primary);
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================== */
+
+/* TABLET (max-width: 1023px) */
+@media (max-width: 1023px) {
+  .home-nav-links {
+    gap: 1.25rem;
+  }
+}
+
+/* MOBILE (max-width: 768px) */
+@media (max-width: 768px) {
+  .home-nav-container {
+    padding: 0.6rem 1rem;
+  }
+
+  .home-nav-logo {
+    height: 34px;
+  }
+
+  .home-nav-links {
+    display: none; /* Keep mobile header lightweight & focused on auth actions */
+  }
+
+  .home-btn-signin {
+    padding: 0.45rem 0.85rem;
+    font-size: var(--font-size-caption);
+  }
+
+  .home-btn-signup {
+    padding: 0.45rem 1rem;
+    font-size: var(--font-size-caption);
+  }
+}
+
+/* SMALL MOBILE (max-width: 480px) */
+@media (max-width: 480px) {
+  .home-nav-actions {
+    gap: 0.4rem;
+  }
+
+  .home-btn-signin {
+    padding: 0.4rem 0.65rem;
+  }
+
+  .home-btn-signup {
+    padding: 0.4rem 0.85rem;
+  }
+}

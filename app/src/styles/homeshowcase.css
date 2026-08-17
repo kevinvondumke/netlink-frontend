@@ -1,0 +1,141 @@
+/* ========================
+   NETLINK PRODUCT SHOWCASE 
+   ======================== */
+.home-showcase-section {
+  padding: 5rem 1.5rem;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+.home-showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/* SECTION HEADER */
+.home-showcase-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem auto;
+}
+.home-showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background-color: rgba(0, 97, 69, 0.08);
+  border: 1px solid rgba(0, 97, 69, 0.2);
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+.home-showcase-badge span {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-primary);
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+.home-showcase-title {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: var(--color-gray-900);
+  letter-spacing: -0.02rem;
+  margin: 3rem 0 3rem 0;
+}
+.home-showcase-desc {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-gray-800);
+  margin: 0;
+}
+.showcase-browser-frame {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow:
+    0 20px 48px -8px rgba(0, 0, 0, 0.09),
+    0 2px 6px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.showcase-browser-frame:hover {
+  box-shadow: 0 24px 56px -6px rgba(0, 0, 0, 0.12);
+}
+.showcase-browser-topbar {
+  background-color: var(--color-gray-100);
+  padding: 0.65rem 1.25rem;
+  border-bottom: 1px solid var(--color-gray-300);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.showcase-window-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.showcase-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.showcase-dot.red {
+  background-color: #ff5f56;
+}
+.showcase-dot.yellow {
+  background-color: #ffbd2e;
+}
+.showcase-dot.green {
+  background-color: #27c93f;
+}
+.showcase-url-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.72rem;
+  color: var(--color-gray-700);
+}
+.showcase-url-bar svg {
+  color: var(--color-primary);
+}
+.showcase-topbar-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.7rem;
+  color: var(--color-primary);
+}
+.showcase-app-workspace {
+  background-color: var(--color-gray-50);
+}
+.showcase-app-workspace img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ======================
+   RESPONSIVE BREAKPOINTS
+   ====================== */
+
+/* MOBILE (max-width: 768px) */
+@media (max-width: 768px) {
+  .home-showcase-section {
+    padding: 3rem 1rem;
+  }
+  .home-showcase-header {
+    margin-bottom: 2rem;
+  }
+}

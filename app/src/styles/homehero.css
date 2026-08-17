@@ -1,0 +1,467 @@
+/* ===================================================
+   NETLINK PUBLIC HERO SECTION (XENON DESIGN SYSTEM)
+   =================================================== */
+
+.home-hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1.5rem 3.5rem 1.5rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-gray-50) 100%);
+}
+
+.home-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ===================================================
+   HERO LEFT: COPY & ACTIONS
+   =================================================== */
+
+.home-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* PILL BADGE */
+.home-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(0, 97, 69, 0.08);
+  border: 1px solid rgba(0, 97, 69, 0.2);
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+}
+
+.home-hero-badge span {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-primary);
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+/* HEADLINE */
+.home-hero-headline {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 2.75rem;
+  line-height: 1.15;
+  color: var(--color-gray-900);
+  letter-spacing: -0.03rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.home-hero-headline .highlight {
+  color: var(--color-primary);
+}
+
+/* SUBTITLE / DESCRIPTION */
+.home-hero-subtitle {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-gray-800);
+  margin: 0 0 2rem 0;
+  max-width: 520px;
+}
+
+/* CTA GROUP */
+.home-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.home-hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-button);
+  color: var(--color-white);
+  text-decoration: none;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(0, 97, 69, 0.25);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.home-hero-btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 6px 18px rgba(0, 97, 69, 0.35);
+  transform: translateY(-2px);
+}
+
+.home-hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: var(--font-size-button);
+  color: var(--color-gray-800);
+  text-decoration: none;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.home-hero-btn-secondary:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-gray-50);
+  transform: translateY(-1px);
+}
+
+/* VALUE SIGNALS LIST */
+.home-hero-signals {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-hero-signal-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-700);
+}
+
+.home-hero-signal-item svg {
+  color: var(--color-primary);
+}
+
+/* ===================================================
+   HERO RIGHT: LIVE NETLINK PRODUCT UI COMPOSITION
+   =================================================== */
+.home-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-hero-stack {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+.hero-post-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--color-gray-300);
+  position: relative;
+  z-index: 2;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.hero-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.08);
+}
+.hero-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+.hero-post-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.hero-author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.hero-author-info {
+  display: flex;
+  flex-direction: column;
+}
+.hero-author-name {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-gray-900);
+  margin: 0;
+}
+.hero-author-username {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-gray-600);
+  margin: 0;
+}
+.hero-audience-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.55rem;
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-sm);
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 0.65rem;
+  color: var(--color-primary);
+}
+
+/* POST CONTENT */
+.hero-post-content {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+}
+
+.hero-post-mention {
+  font-family: "Montserrat Medium", sans-serif;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* POST ENGAGEMENT BAR */
+.hero-post-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.hero-post-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-gray-800);
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: var(--font-size-caption);
+  transition: color 0.2s ease;
+}
+
+.hero-post-action-btn.liked {
+  color: #c31010;
+}
+
+.hero-post-action-btn.liked svg {
+  fill: #c31010;
+}
+
+.hero-post-action-btn.commented {
+  color: var(--color-primary);
+}
+
+.hero-post-action-btn.commented svg {
+  fill: var(--color-primary);
+}
+
+/* ===================================================
+   FLOATING COMPOSITION ACCENT CARDS
+   =================================================== */
+
+/* 1. FLOATING MESSAGE BUBBLE */
+.hero-float-message {
+  position: absolute;
+  top: -35px;
+  right: -20px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-gray-300);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  z-index: 3;
+  animation: floatSlow 4s ease-in-out infinite alternate;
+}
+
+.hero-float-msg-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-float-msg-title {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.72rem;
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+.hero-float-msg-preview {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.65rem;
+  color: var(--color-gray-600);
+  margin: 0;
+}
+
+/* 2. FLOATING FAVORITES PILL CARD */
+.hero-float-favorites {
+  position: absolute;
+  bottom: -40px;
+  left: -20px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.95rem;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-gray-300);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 3;
+  animation: floatSlow 4s ease-in-out 1s infinite alternate-reverse;
+}
+
+.hero-float-fav-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.hero-float-fav-avatars img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-left: -8px;
+}
+
+.hero-float-fav-avatars img:first-child {
+  margin-left: 0;
+  opacity: 0.4;
+}
+.hero-float-fav-avatars img:nth-child(2) {
+  opacity: 0.7;
+}
+
+.hero-float-fav-label {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.7rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* SUBTLE FLOATING ANIMATION */
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================== */
+
+/* TABLET (max-width: 1023px) */
+@media (max-width: 1023px) {
+  .home-hero-section {
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
+  }
+
+  .home-hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .home-hero-copy {
+    align-items: center;
+  }
+
+  .home-hero-headline {
+    font-size: 2.25rem;
+    margin: 2rem 0;
+  }
+
+  .home-hero-subtitle {
+    max-width: 100%;
+  }
+
+  .home-hero-signals {
+    justify-content: center;
+  }
+
+  .home-hero-stack {
+    max-width: 600px;
+    margin: 2rem 0;
+  }
+
+  .hero-post-content {
+    text-align: left;
+  }
+}
+
+/* MOBILE (max-width: 768px) */
+@media (max-width: 768px) {
+  .home-hero-section {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
+  .home-hero-container {
+    gap: 2.25rem;
+  }
+
+  .home-hero-headline {
+    font-size: 1.85rem;
+  }
+
+  .home-hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .home-hero-btn-primary,
+  .home-hero-btn-secondary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .home-hero-signals {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem 1.25rem;
+  }
+
+  .hero-float-message,
+  .hero-float-favorites {
+    display: none;
+  }
+
+  .hero-post-card {
+    padding: 1rem;
+  }
+}

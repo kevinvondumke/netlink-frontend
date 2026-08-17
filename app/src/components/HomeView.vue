@@ -1,34 +1,37 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HomeNav from "./HomeNav.vue";
+import HomeHero from "./HomeHero.vue";
+import HomeShowcase from "./HomeShowcase.vue";
+import HomeBentoGrid from "./HomeBentoGrid.vue";
+import HomePrinciples from "./HomePrinciples.vue";
+import HomeCTA from "./HomeCTA.vue";
+import HomeFooter from "./HomeFooter.vue";
+</script>
 
 <template>
-  <div class="home-base">
-    <router-link :to="{ name: 'login' }">
-      <img
-        src="../assets/logos/netlink-logo.png"
-        alt="Netlink Logo"
-        height="150"
-      />
-    </router-link>
+  <div class="home-page-layout">
+    <HomeNav />
+    <main id="main-content">
+      <HomeHero />
+      <HomeShowcase />
+      <HomeBentoGrid />
+      <HomePrinciples />
+      <HomeCTA />
+    </main>
+    <HomeFooter />
   </div>
 </template>
 
 <style scoped>
-.home-base {
-  background-color: #ffffff !important;
-  height: 100vh;
+.home-page-layout {
+  min-height: 100vh;
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
-a:hover {
-  background: none;
-}
-
-@media screen and (max-width: 768px) {
-  .home-base img {
-    height: 75px;
-  }
+#main-content {
+  flex: 1;
 }
 </style>

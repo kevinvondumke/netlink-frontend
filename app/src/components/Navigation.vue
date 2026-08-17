@@ -15,8 +15,7 @@ import { useUserData } from "../shared/userData";
 const authStore = useAuthStore();
 const route = useRoute();
 const router = useRouter();
-const { unreadMessagesCount, getUnreadMessagesCount } =
-  useUserData();
+const { unreadMessagesCount, getUnreadMessagesCount } = useUserData();
 
 onMounted(async () => {
   await getUnreadMessagesCount();

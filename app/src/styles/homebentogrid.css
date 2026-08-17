@@ -1,0 +1,512 @@
+/* ===================================================
+   NETLINK CAPABILITY BENTO GRID (XENON DESIGN SYSTEM)
+   =================================================== */
+
+.home-bento-section {
+  padding: 5.5rem 1.5rem;
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, #ffffff 100%);
+}
+
+.home-bento-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* SECTION HEADER */
+.home-bento-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.home-bento-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background-color: rgba(0, 97, 69, 0.08);
+  border: 1px solid rgba(0, 97, 69, 0.2);
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.home-bento-badge span {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-primary);
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+.home-bento-title {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: var(--color-gray-900);
+  letter-spacing: -0.02rem;
+  margin: 3rem 0 3rem 0;
+}
+
+.home-bento-desc {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-gray-800);
+  margin: 0;
+}
+
+/* ===================================================
+   12-COLUMN ASYMMETRIC BENTO GRID
+   =================================================== */
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+/* BENTO CARD BASE */
+.bento-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 97, 69, 0.3);
+}
+
+.bento-card-info {
+  margin-bottom: 1.5rem;
+}
+
+.bento-card-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: rgba(0, 97, 69, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+}
+
+.bento-card-title {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 1.15rem;
+  color: var(--color-gray-900);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01rem;
+}
+
+.bento-card-text {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-gray-800);
+  margin: 0;
+}
+
+/* ===================================================
+   CARD 1: AUDIENCE VISIBILITY (SPAN 7 COLS)
+   =================================================== */
+
+.bento-card-audience {
+  grid-column: span 7;
+  background: linear-gradient(145deg, #ffffff 0%, rgba(0, 97, 69, 0.02) 100%);
+}
+
+.bento-audience-chips {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  background-color: var(--color-gray-50);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-200);
+}
+
+.bento-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bento-chip:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-gray-50);
+}
+
+.bento-chip.active {
+  border-color: var(--color-primary);
+  background-color: rgba(0, 97, 69, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 97, 69, 0.12);
+}
+
+.bento-chip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-chip-label {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.75rem;
+  color: var(--color-gray-900);
+}
+
+.bento-chip-sub {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.65rem;
+  color: var(--color-gray-600);
+}
+
+/* ===================================================
+   CARD 2: CURATED FAVORITES (SPAN 5 COLS)
+   =================================================== */
+
+.bento-card-favorites {
+  grid-column: span 5;
+}
+
+.bento-favorites-preview {
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bento-fav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.75rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-gray-200);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.bento-fav-item:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-gray-50);
+}
+
+.bento-fav-item.active {
+  border-color: var(--color-primary);
+  background-color: rgba(0, 97, 69, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 97, 69, 0.12);
+}
+
+.bento-fav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.bento-fav-user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bento-fav-meta p {
+  margin: 0;
+}
+
+.bento-fav-name {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.75rem;
+  color: var(--color-gray-900);
+}
+
+.bento-fav-handle {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.65rem;
+  color: var(--color-gray-600);
+}
+
+.bento-fav-badge {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.65rem;
+  color: var(--color-gray-600);
+  background-color: var(--color-gray-100);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  transition: all 0.2s ease;
+}
+
+.bento-fav-item.active .bento-fav-badge {
+  color: var(--color-primary);
+  background-color: rgba(0, 97, 69, 0.12);
+}
+
+/* ===================================================
+   CARD 3: DIRECT CHAT (SPAN 4 COLS)
+   =================================================== */
+
+.bento-card-chat {
+  grid-column: span 4;
+}
+
+.bento-chat-preview {
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bento-chat-msg-received {
+  align-self: flex-start;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md) var(--radius-md) var(--radius-md) 0;
+  max-width: 85%;
+}
+
+.bento-chat-msg-received p {
+  margin: 0;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.72rem;
+  color: var(--color-gray-900);
+}
+
+.bento-chat-msg-sent {
+  align-self: flex-end;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md) var(--radius-md) 0 var(--radius-md);
+  max-width: 85%;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.bento-chat-msg-sent p {
+  margin: 0;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 0.72rem;
+  color: var(--color-white);
+}
+
+/* ===================================================
+   CARD 4: TARGETED EXPLORE (SPAN 4 COLS)
+   =================================================== */
+
+.bento-card-explore {
+  grid-column: span 4;
+}
+
+.bento-explore-preview {
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.bento-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.75rem;
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 0.72rem;
+  color: var(--color-gray-700);
+  transition: border-color 0.2s ease;
+}
+
+.bento-filter-pills {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.bento-filter-pill {
+  padding: 0.25rem 0.65rem;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-300);
+  border-radius: var(--radius-full);
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 0.65rem;
+  color: var(--color-gray-800);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.bento-filter-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.bento-filter-pill.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 6px rgba(0, 97, 69, 0.25);
+}
+
+/* ===================================================
+   CARD 5: SAFETY & MODERATION (SPAN 4 COLS)
+   =================================================== */
+
+.bento-card-safety {
+  grid-column: span 4;
+}
+
+.bento-safety-preview {
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bento-safety-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 0.55rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.bento-safety-row:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-gray-50);
+}
+
+.bento-safety-row.active {
+  background-color: rgba(200, 254, 239, 0.218);
+  box-shadow: 0 2px 8px rgba(0, 97, 69, 0.12);
+}
+
+.bento-safety-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 0.72rem;
+  color: var(--color-gray-900);
+}
+
+.bento-safety-status {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 0.65rem;
+  color: var(--color-gray-600);
+  background-color: var(--color-gray-100);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  transition: all 0.2s ease;
+}
+
+.bento-safety-row.active .bento-safety-status {
+  color: var(--color-primary);
+  background-color: rgba(1, 255, 183, 0.12);
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================== */
+
+/* TABLET (max-width: 1023px) */
+@media (max-width: 1023px) {
+  .home-bento-section {
+    padding: 4rem 1.5rem;
+  }
+  .home-bento-title {
+    font-size: 1.85rem;
+  }
+  .bento-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .bento-card-audience {
+    grid-column: span 6;
+  }
+  .bento-card-favorites {
+    grid-column: span 6;
+  }
+  .bento-card-chat {
+    grid-column: span 3;
+  }
+  .bento-card-explore {
+    grid-column: span 3;
+  }
+  .bento-card-safety {
+    grid-column: span 6;
+  }
+}
+
+/* MOBILE (max-width: 768px) */
+@media (max-width: 768px) {
+  .home-bento-section {
+    padding: 3rem 1rem;
+  }
+  .home-bento-header {
+    margin-bottom: 2.25rem;
+  }
+  .home-bento-title {
+    font-size: 1.5rem;
+  }
+  .home-bento-desc {
+    font-size: 0.9rem;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .bento-card-audience,
+  .bento-card-favorites,
+  .bento-card-chat,
+  .bento-card-explore,
+  .bento-card-safety {
+    grid-column: span 1;
+  }
+  .bento-audience-chips {
+    grid-template-columns: 1fr;
+  }
+}

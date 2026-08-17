@@ -1,0 +1,187 @@
+/* ===================================================
+   NETLINK FINAL CALL TO ACTION (XENON DESIGN SYSTEM)
+   =================================================== */
+
+.home-cta-section {
+  padding: 5.5rem 1.5rem;
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+}
+
+.home-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.home-cta-card {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: var(--radius-lg);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--color-white);
+  box-shadow: 0 16px 40px -8px rgba(0, 97, 69, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+/* SUBTLE BACKGROUND ORB ACCENT */
+.home-cta-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.home-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.home-cta-badge span {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-caption);
+  color: var(--color-white);
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+.home-cta-headline {
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 2.75rem;
+  line-height: 1.15;
+  color: var(--color-white);
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02rem;
+  position: relative;
+  z-index: 1;
+}
+
+.home-cta-subtitle {
+  font-family: "Montserrat Regular", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 580px;
+  margin: 0 auto 2.5rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA ACTIONS */
+.home-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.home-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.25rem;
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: var(--font-size-button);
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.home-cta-btn-primary:hover {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-100);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2rem;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: var(--font-size-button);
+  color: var(--color-white);
+  text-decoration: none;
+  background-color: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-md);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.home-cta-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================== */
+
+@media (max-width: 1023px) {
+  .home-cta-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .home-cta-card {
+    padding: 3rem 1.5rem;
+  }
+
+  .home-cta-headline {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .home-cta-card {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .home-cta-headline {
+    font-size: 1.85rem;
+  }
+
+  .home-cta-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-cta-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .home-cta-btn-primary,
+  .home-cta-btn-secondary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
