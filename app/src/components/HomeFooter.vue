@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import SpriteIcon from "./SpriteIcon.vue";
 
 // STYLES
 import "../styles/homefooter.css";
