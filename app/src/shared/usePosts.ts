@@ -137,7 +137,7 @@ export function usePosts() {
 
   async function loadPosts(route: string) {
     // CHECK IF USER IS AUTHENTICATED
-    if (!authStore.token) {
+    if (!authStore.isAuthenticated()) {
       router.push("/login");
       return;
     }
@@ -189,7 +189,7 @@ export function usePosts() {
   async function loadPost(postId: number | string) {
     try {
       // CHECK IF USER IS AUTHENTICATED
-      if (!authStore.token) {
+      if (!authStore.isAuthenticated()) {
         router.push("/login");
         return;
       }
@@ -207,7 +207,7 @@ export function usePosts() {
   async function loadShare(shareId: number | string) {
     try {
       // CHECK IF USER IS AUTHENTICATED
-      if (!authStore.token) {
+      if (!authStore.isAuthenticated()) {
         router.push("/login");
         return;
       }

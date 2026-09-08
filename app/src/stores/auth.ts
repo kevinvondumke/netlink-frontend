@@ -12,7 +12,7 @@ export const useAuthStore = defineStore("auth", {
         return JSON.parse(rawUser) as {
           id?: number | string;
           name?: string;
-          username?: string;          
+          username?: string;
           avatarUrl?: string;
           email?: string;
         };
@@ -21,19 +21,13 @@ export const useAuthStore = defineStore("auth", {
         return null;
       }
     })(),
-    token: localStorage.getItem("token") || null,
     isNavOpen: ref(false),
   }),
 
   actions: {
     async login(email: string, password: string) {
       const res = await api.post("/auth/login", { email, password });
-      this.token = res.data.accessToken;
       this.user = res.data.user;
-
-      if (this.token) {
-        localStorage.setItem("token", this.token);
-      }
 
       if (this.user) {
         localStorage.setItem("user", JSON.stringify(this.user));
@@ -44,15 +38,19 @@ export const useAuthStore = defineStore("auth", {
       await api.post("/auth/register", { email, name, password });
     },
 
-    logout() {
-      this.user = null;
-      this.token = null;
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
+    async logout() {
+      try {
+        await api.post("/auth/logout");
+      } catch (err) {
+        console.error("Logout request failed: ", err);
+      } finally {
+        this.user = null;
+        localStorage.removeItem("user");
+      }
     },
 
     isAuthenticated() {
-      if (this.token && this.user) {
+      if (this.user) {
         return true;
       } else {
         return false;

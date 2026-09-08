@@ -6,15 +6,7 @@ const apiBase = import.meta.env.VITE_API_URL ?? LOCAL_API;
 
 const api = axios.create({
   baseURL: apiBase,
-});
-
-// INJECT TOKEN
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
+  withCredentials: true, // AUTO COOKIEES!
 });
 
 export default api;
