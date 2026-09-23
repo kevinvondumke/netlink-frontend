@@ -1,8 +1,8 @@
 # NETLINK — Frontend
 Modern social platform for network engineers, built with Vue 3, Vite, Pinia, and the CYDERX Design System.
 
-## Status Health
-https://github.com/kevinvondumke/netlink-frontend/actions/workflows/ci.yml
+## Status
+[![Netlink Frontend CI](https://github.com/kevinvondumke/netlink-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/kevinvondumke/netlink-frontend/actions/workflows/ci.yml)
 
 ## Tech Stack
 - Vue 3 (Composition API)
