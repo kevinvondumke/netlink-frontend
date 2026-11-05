@@ -1,6 +1,7 @@
 /// <reference types="vitest/config" />
 
 import { defineConfig } from "vite";
+import { configDefaults } from "vitest/config";
 import vue from "@vitejs/plugin-vue";
 
 // https://vite.dev/config/
@@ -13,5 +14,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "node",
+    exclude: [...configDefaults.exclude, "e2e/**"],
   },
 });
