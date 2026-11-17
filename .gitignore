@@ -141,3 +141,5 @@ vite.config.ts.timestamp-*
 # Playwright generated artifacts
 /app/playwright-report/
 /app/test-results/
+/app/.auth/
+/app/playwright/.auth/

@@ -42,3 +42,17 @@ jobs:
         run: |
           test -f dist/index.html || { echo "--> Missing dist/index.html!"; exit 1; }
           echo "--> Build artifacts verified successfully."
+      
+      - name: Install Playwright Browsers with OS Dependencies
+        run: npx playwright install --with-deps chromium
+      
+      - name: Run Playwright E2E Tests
+        run: npx playwright test --project=chromium
+
+      - name: Upload Playwright Test Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: app/playwright-report/
+          retention-days: 14
