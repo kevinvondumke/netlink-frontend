@@ -259,7 +259,7 @@ onMounted(async () => {
     </div>
     <div class="dash-content scrollable-hidden">
       <div class="dash-lposts">
-        <h2>Lastest Posts</h2>
+        <h2>Latest Posts</h2>
         <SkeletonPost v-if="loadingPosts" />
         <ErrorState
           v-else-if="postsError"
