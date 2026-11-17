@@ -1,4 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { mockAuthApi } from './auth-api.mock';
+test.beforeEach(async ({ page }) => {
+  await mockAuthApi(page);
+});
 
 test('User can complete the full authentication lifecycle: register, login, view dashboard and logout', async ({ page }) => {
   // UNIQUE TEST USER

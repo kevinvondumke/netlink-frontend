@@ -1,4 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { mockAuthApi } from './auth-api.mock';
+test.beforeEach(async ({ page }) => {
+  await mockAuthApi(page);
+});
 
 test('Unauthenticated visitor navigating to protected route is redirected to login page', async ({ page }) => {
   await page.goto('/dashboard');
